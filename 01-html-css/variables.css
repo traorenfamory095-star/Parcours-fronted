@@ -1,0 +1,212 @@
+/* ==========================================================
+   UGANC GUIDE : variables CSS (design tokens)
+   Source : design system "UGANC GUIDE" + charte graphique v1.0
+   Usage  : <link rel="stylesheet" href="variables.css"> avant style.css
+            puis  color: var(--color-primary);
+   ========================================================== */
+
+/* Polices (Outfit pour les titres, Inter pour le texte).
+   À charger dans le <head> du HTML :
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+*/
+
+:root {
+  /* ---------- 1. COULEURS : jeu complet du design system ---------- */
+
+  /* Surfaces */
+  --color-surface: #f8f9ff;
+  --color-surface-dim: #cbdbf4;
+  --color-surface-bright: #f8f9ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eef4ff;
+  --color-surface-container: #e5eeff;
+  --color-surface-container-high: #dbe9ff;
+  --color-surface-container-highest: #d3e4fc;
+  --color-surface-variant: #d3e4fc;
+  --color-surface-tint: #485f82;
+  --color-background: #f8f9ff;
+
+  /* Textes sur surfaces */
+  --color-on-surface: #1f2a37;
+  --color-on-surface-variant: #5b6b80;
+  --color-on-background: #1f2a37;
+
+  /* Surfaces inversées */
+  --color-inverse-surface: #223144;
+  --color-inverse-on-surface: #eaf1ff;
+  --color-inverse-primary: #b0c8f0;
+
+  /* Contours */
+  --color-outline: #74777f;
+  --color-outline-variant: #d9dfe7;
+
+  /* Primaire : bleu marine */
+  --color-primary: #0f2a4a;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #1a3a5f;
+  --color-on-primary-container: #7a92b7;
+  --color-primary-fixed: #d4e3ff;
+  --color-primary-fixed-dim: #b0c8f0;
+  --color-on-primary-fixed: #001c3a;
+  --color-on-primary-fixed-variant: #304869;
+
+  /* Secondaire : or */
+  --color-secondary: #a8841a;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #c9a227;
+  --color-on-secondary-container: #0f2a4a;
+  --color-secondary-fixed: #ffe08e;
+  --color-secondary-fixed-dim: #ecc246;
+  --color-on-secondary-fixed: #241a00;
+  --color-on-secondary-fixed-variant: #584400;
+
+  /* Tertiaire */
+  --color-tertiary: #00162c;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #002b4e;
+  --color-on-tertiary-container: #5e94d2;
+  --color-tertiary-fixed: #d2e4ff;
+  --color-tertiary-fixed-dim: #a0caff;
+  --color-on-tertiary-fixed: #001c37;
+  --color-on-tertiary-fixed-variant: #00497e;
+
+  /* Erreur */
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* ---------- 2. COULEURS : alias sémantiques (ceux que tu utiliseras le plus) ---------- */
+
+  --color-navy: #0f2a4a;            /* bleu UGANC : barres, boutons principaux */
+  --color-gold: #c9a227;            /* or repère : destination, accents, jamais en grand aplat */
+  --color-gold-text: #a8841a;       /* or lisible pour du texte sur fond clair */
+  --color-info: #1d5c96;            /* bleu maritime : alertes, état actif du bouton */
+  --color-success: #1e7e4e;         /* vert : "Ouvert", itinéraire terminé */
+
+  --color-text: #1f2a37;            /* texte principal */
+  --color-text-muted: #5b6b80;      /* texte secondaire : distances, numéros */
+  --color-canvas: #f4f6f9;          /* fond des pages */
+  --color-card: #ffffff;            /* fond des cartes et fiches */
+  --color-border: #d9dfe7;          /* bordures et séparateurs */
+
+  /* ---------- 3. TYPOGRAPHIE ---------- */
+
+  --font-display: "Outfit", Calibri, Arial, sans-serif;
+  --font-body: "Inter", Calibri, Arial, sans-serif;
+
+  /* display-lg */
+  --text-display-lg-family: var(--font-display);
+  --text-display-lg-size: 32px;
+  --text-display-lg-weight: 700;
+  --text-display-lg-line: 40px;
+
+  /* headline-lg */
+  --text-headline-lg-family: var(--font-display);
+  --text-headline-lg-size: 26px;
+  --text-headline-lg-weight: 700;
+  --text-headline-lg-line: 34px;
+
+  /* headline-md */
+  --text-headline-md-family: var(--font-display);
+  --text-headline-md-size: 22px;
+  --text-headline-md-weight: 600;
+  --text-headline-md-line: 30px;
+
+  /* headline-sm */
+  --text-headline-sm-family: var(--font-display);
+  --text-headline-sm-size: 18px;
+  --text-headline-sm-weight: 600;
+  --text-headline-sm-line: 26px;
+
+  /* body-lg */
+  --text-body-lg-family: var(--font-body);
+  --text-body-lg-size: 18px;
+  --text-body-lg-weight: 400;
+  --text-body-lg-line: 28px;
+
+  /* body-md : taille de base (jamais en dessous de 16px sur mobile) */
+  --text-body-md-family: var(--font-body);
+  --text-body-md-size: 16px;
+  --text-body-md-weight: 400;
+  --text-body-md-line: 24px;
+
+  /* body-md-bold */
+  --text-body-md-bold-family: var(--font-body);
+  --text-body-md-bold-size: 16px;
+  --text-body-md-bold-weight: 600;
+  --text-body-md-bold-line: 24px;
+
+  /* label-lg */
+  --text-label-lg-family: var(--font-body);
+  --text-label-lg-size: 14px;
+  --text-label-lg-weight: 600;
+  --text-label-lg-line: 20px;
+
+  /* label-md */
+  --text-label-md-family: var(--font-body);
+  --text-label-md-size: 13px;
+  --text-label-md-weight: 500;
+  --text-label-md-line: 18px;
+
+  /* label-sm */
+  --text-label-sm-family: var(--font-body);
+  --text-label-sm-size: 12px;
+  --text-label-sm-weight: 600;
+  --text-label-sm-line: 16px;
+  --text-label-sm-tracking: 0.02em;
+
+  /* ---------- 4. ARRONDIS ---------- */
+
+  --radius-sm: 0.25rem;     /* 4px  : cases à cocher */
+  --radius: 0.5rem;         /* 8px  : défaut */
+  --radius-md: 0.75rem;     /* 12px : boutons, champs, cartes */
+  --radius-lg: 1rem;        /* 16px */
+  --radius-xl: 1.5rem;      /* 24px */
+  --radius-full: 9999px;    /* pastilles, puces, badges */
+  --radius-sheet: 20px;     /* coins supérieurs des panneaux du bas */
+
+  /* ---------- 5. ESPACEMENTS ---------- */
+
+  --space-xs: 0.25rem;      /* 4px  */
+  --space-sm: 0.5rem;       /* 8px  */
+  --space-md: 1rem;         /* 16px */
+  --space-lg: 1.5rem;       /* 24px */
+  --space-xl: 2rem;         /* 32px */
+  --gutter: 1rem;
+  --margin: 1rem;
+
+  /* ---------- 6. ÉLÉVATION (ombres) ---------- */
+
+  --shadow-0: none;                                        /* niveau 0 : fond */
+  --shadow-1: none;                                        /* niveau 1 : carte, bordure 1px seulement */
+  --shadow-2: 0 2px 6px rgba(15, 42, 74, 0.08);            /* niveau 2 : barre de recherche flottante */
+  --shadow-3: 0 -4px 16px rgba(15, 42, 74, 0.12);          /* niveau 3 : panneau du bas */
+
+  /* ---------- 7. COMPOSANTS : dimensions utiles ---------- */
+
+  --touch-target: 44px;            /* taille minimale d'une zone cliquable */
+  --button-height: 48px;
+  --button-padding-x: 20px;
+  --input-height: 48px;
+  --input-padding-x: 16px;
+  --chip-height: 36px;
+  --checkbox-size: 24px;
+  --step-marker-size: 32px;
+  --guide-rail-width: 2px;
+
+  --focus-ring: 2px solid var(--color-gold);
+  --focus-ring-offset: 2px;
+
+  /* ---------- 8. POINTS DE RUPTURE (référence, non utilisables dans @media) ----------
+     Les variables CSS ne fonctionnent pas dans @media : écris ces valeurs directement.
+     Mobile compact : 360px à 479px  (marge 1rem)
+     Mobile large   : 480px à 767px  (marge 1.25rem)
+     Tablette+      : à partir de 768px (marge 2rem, gouttière 1.5rem)
+  */
+  --margin-mobile-large: 1.25rem;
+  --margin-tablet: 2rem;
+  --gutter-tablet: 1.5rem;
+}
