@@ -55,6 +55,7 @@ main{
     border-radius: var(--radius);
     height: auto;
     display: block;
+    object-fit: cover;
 }
 
 .amphi-head, .amphi-foot{
