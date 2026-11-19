@@ -21,6 +21,8 @@ header{
     color: var(--color-navy);
     border-bottom: 0.5px solid var(--color-border);
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
 }
@@ -40,7 +42,7 @@ main{
     justify-content: space-between;
     padding: 0 8px;
     color: var(--color-text-muted);
-    font-weight: var(--text-headline-lg-weigh);
+    font-weight: var(--text-display-lg-line);
 }
 
 /*image style*/
@@ -333,8 +335,11 @@ main{
 }
 
 .img-plan img{
+    width: 100%;
     max-width: 100%;
     border-radius: var(--radius);
+    object-fit: cover;
+    height: 200px;
 }
 
 /*notification*/
@@ -378,7 +383,7 @@ button {
 }
 
 /*Footer*/
-footer {
+nav {
     display: flex;
     justify-content: space-evenly;
     background: var(--color-card);
@@ -389,7 +394,7 @@ footer {
     right: 0;
 }
 
-footer div{
+nav div{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -397,6 +402,6 @@ footer div{
     padding: 10px;
 }
 
-footer div:nth-child(2) i{
+nav div:nth-child(2) i{
     color: var(--color-gold);
 }
