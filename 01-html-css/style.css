@@ -7,10 +7,11 @@
 
 body{
     background: var(--color-canvas);
+    font-family: var(--font-body);
+    position: relative;
 }
 
 /*en-tete*/
-
 header{
     padding: 1rem;
     display: flex;
@@ -18,13 +19,20 @@ header{
     font-size: large;
     background-color: var(--color-card);
     color: var(--color-navy);
-    border: var(--color-border);
+    border-bottom: 0.5px solid var(--color-border);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 
 /*contenu de la page*/
+main{
+    padding: 60px 0;
+}
+
 .container{
-    padding: 10px;
+    padding: 15px;
 }
 
 .lieu-c{
@@ -32,7 +40,7 @@ header{
     justify-content: space-between;
     padding: 0 8px;
     color: var(--color-text-muted);
-    font-weight: var();
+    font-weight: var(--text-headline-lg-weigh);
 }
 
 /*image style*/
@@ -51,13 +59,14 @@ header{
 
 .amphi-head, .amphi-foot{
     position: absolute;
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: small;
     margin: 4px;
     color: aliceblue;
+    padding: 0 20px;
 }
 
 .amphi-head{
@@ -250,11 +259,17 @@ header{
     width: 10vw;
 }
 
-.horaire div:last-child p:nth-child(1), p:nth-child(3){
+.horaire div:last-child p:nth-child(1){
     font-family: 'Inter';
     font-size: 14px;
     color: var(--color-text-muted);
 } 
+
+.horaire div:last-child p:nth-child(3){
+    font-family: 'Inter';
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
 
 .horaire div:last-child p:nth-child(2){
     font-family: 'Outfit';
@@ -312,6 +327,15 @@ header{
     border-radius: var(--radius);
 }
 
+.img-plan {
+    margin-top: 10px;
+}
+
+.img-plan img{
+    max-width: 100%;
+    border-radius: var(--radius);
+}
+
 /*notification*/
 .notif{
     background: var(--color-primary-fixed);
@@ -333,7 +357,7 @@ button {
     padding: 12px;
     border-radius: var(--radius);
     gap: 8px;
-    border: 0.5px;
+    border: none;
     justify-content: center;
     align-items: center;
     font-family: 'Outfit';
@@ -358,6 +382,10 @@ footer {
     justify-content: space-evenly;
     background: var(--color-card);
     color: var(--color-navy);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 footer div{
